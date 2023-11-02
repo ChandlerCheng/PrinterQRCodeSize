@@ -1,0 +1,15 @@
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\bin\Debug\qrcodeSizeCal.exe.config
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\bin\Debug\qrcodeSizeCal.exe
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\bin\Debug\qrcodeSizeCal.pdb
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.csproj.AssemblyReference.cache
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\MainWindow.g.cs
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\App.g.cs
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal_MarkupCompile.cache
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal_MarkupCompile.lref
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\MainWindow.baml
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.g.resources
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.Properties.Resources.resources
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.csproj.GenerateResource.cache
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.csproj.CoreCompileInputs.cache
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.exe
+C:\Users\chand\source\repos\qrcodeSizeCal\qrcodeSizeCal\obj\Debug\qrcodeSizeCal.pdb

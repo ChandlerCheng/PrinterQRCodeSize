@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qrcodeSizeCal", "qrcodeSizeCal\qrcodeSizeCal.csproj", "{87756C7E-6C27-400B-B125-C70FF8ED9998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87756C7E-6C27-400B-B125-C70FF8ED9998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87756C7E-6C27-400B-B125-C70FF8ED9998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87756C7E-6C27-400B-B125-C70FF8ED9998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87756C7E-6C27-400B-B125-C70FF8ED9998}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A5C831D-E3BB-4F31-8526-C7D33599E95D}
+	EndGlobalSection
+EndGlobal

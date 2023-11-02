@@ -1,0 +1,88 @@
+﻿<Window x:Class="qrcodeSizeCal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:qrcodeSizeCal"
+        mc:Ignorable="d"
+        Title="QR Code Calculator" Height="500" Width="440" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
+            <WrapPanel>
+                <TextBlock FontSize="28">目標寬度</TextBlock>
+                <TextBox InputMethod.IsInputMethodEnabled="False" PreviewTextInput="TextBox_PreviewTextInput" FontSize="28" Name="InputFinalMm" Width="90" Background="White"></TextBox>
+                <ComboBox Name="comboUnit" FontSize="28" BorderBrush="White">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+            </WrapPanel>
+            <WrapPanel>
+                <ComboBox Name="comboSelectLevel" FontSize="28" BorderBrush="White">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+                <TextBlock FontSize="28">起始條碼等級</TextBlock>
+                <ComboBox Name="comboBarLevel" FontSize="28" BorderBrush="White">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock FontSize="28">解析度</TextBlock>
+                <ComboBox Name="comboDpi" FontSize="28" BorderBrush="White">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+            </WrapPanel>
+
+            <StackPanel Background="#FFCBCBCB">
+                <WrapPanel>
+                    <TextBlock FontSize="36">條碼倍率:</TextBlock>
+                    <TextBlock FontSize="36" Name="ResultRatio" Foreground="Green">Result</TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock FontSize="36">條碼等級:</TextBlock>
+                    <TextBlock FontSize="36" Name="ResultLevel" Foreground="Green">Result</TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock FontSize="36">條碼尺寸:</TextBlock>
+                    <TextBlock FontSize="36" Name="ResultMm" Foreground="Green">Result</TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock FontSize="36">條碼尺寸:</TextBlock>
+                    <TextBlock FontSize="36" Name="ResultDot" Foreground="Green">Result</TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock FontSize="36">目標差距:</TextBlock>
+                    <TextBlock FontSize="36" Name="ResultMinusDot" Foreground="Green">Result</TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock FontSize="36">解析度:</TextBlock>
+                    <TextBlock FontSize="36" Name="ResultDpi" Foreground="Green">Result</TextBlock>
+                </WrapPanel>
+            </StackPanel>
+
+            <Button FontSize="36" Name="CalFinal" Click="CalFinal_Click" Background="White">OK</Button>
+        </StackPanel>
+    </Grid>
+</Window>
