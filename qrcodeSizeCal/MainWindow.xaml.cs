@@ -22,7 +22,7 @@ namespace qrcodeSizeCal
     ///     
     public partial class MainWindow : Window
     {
-        private const string ErrorMessage = "Result Error"; 
+        private const string ErrorMessage = "Result Error";
         private void TextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
@@ -48,7 +48,7 @@ namespace qrcodeSizeCal
                 ResultDpi.Foreground = new SolidColorBrush(Colors.Green);
             }
         }
-        
+
         public static int[] qr_sizes = {
         21, 25, 29, 33, 37,						/* 1 - 5*/
 	    41, 45, 49, 53, 57, 					/* 6 - 10*/
@@ -60,8 +60,8 @@ namespace qrcodeSizeCal
 	    161, 165, 169, 173, 177				/* 36 - 40*/
         };
         public static int[] dpi = { 203, 300 };
-        public string [] unit= {"毫米(mm)","點數(dot)"};
-        public string[] levelUse = { "等於", "大於等於","小於等於" };
+        public string[] unit = { "毫米(mm)", "點數(dot)" };
+        public string[] levelUse = { "等於", "大於等於", "小於等於" };
         public MainWindow()
         {
             InitializeComponent();
@@ -85,50 +85,52 @@ namespace qrcodeSizeCal
             comboUnit.SelectedIndex = 0;
             comboSelectLevel.SelectedIndex = 0;
         }
-        
+
         private void CalFinal_Click(object sender, RoutedEventArgs e)
         {
             int getBarLevel, dpi, Minus = 0, useLevelType = 0;
-            int i,j;
+            int i, j;
             int getFinalMm;
             int tempFinal = 0, tempRatio = 0, tempBarLevel = 0, tempBarIndex = 0;
             int FinalValue = 0, FinalRatio = 0, FinalBarLevel = 0, FinalBarIndex = 0;
-            bool unitIsMm;    
+            bool unitIsMm;
 
             /* 檢查長度 */
-            if (InputFinalMm.Text.Length == 0)            
+            if (InputFinalMm.Text.Length == 0)
                 return;
 
             /* 確定輸入單位與換算 */
-            if (comboSelectLevel.SelectedIndex == -1 || comboSelectLevel.SelectedIndex == 0)
+            if (comboSelectLevel.Text == levelUse[0])
                 useLevelType = 0;
-            else if (comboSelectLevel.SelectedIndex == 1)
+            else if (comboSelectLevel.Text == levelUse[1])
                 useLevelType = 1;
-            else if (comboSelectLevel.SelectedIndex == 2)
+            else if (comboSelectLevel.Text == levelUse[2])
                 useLevelType = 2;
+            else
+                useLevelType = 0;
 
             /* 確定輸入單位與換算 */
-            if (comboDpi.SelectedIndex == -1 || comboDpi.SelectedIndex == 0)
+            if (comboDpi.Text == "203")
                 dpi = 8;
-            else if (comboDpi.SelectedIndex == 1)
+            else if (comboDpi.Text == "300")
                 dpi = 12;
-            else if (comboDpi.SelectedIndex == 2)
+            else if (comboDpi.Text == "600")
                 dpi = 15;
             else
                 dpi = 8;
 
-            if (comboUnit.SelectedIndex == -1 || comboUnit.SelectedIndex == 0)
+            if(comboUnit.Text == unit[0])
                 unitIsMm = true;
-            else
+            else if (comboUnit.Text == unit[1])
                 unitIsMm = false;
+            else
+                unitIsMm = true;
 
             /* 確認基礎條碼等級 */
             if (comboBarLevel.SelectedIndex == -1)
                 getBarLevel = qr_sizes[0];
             else
                 getBarLevel = qr_sizes[comboBarLevel.SelectedIndex];
-
-           
 
             if (unitIsMm)
                 getFinalMm = ((int)double.Parse(InputFinalMm.Text)) * dpi;
@@ -183,11 +185,11 @@ namespace qrcodeSizeCal
                 }
             }
 
-            if (Minus == 0 || FinalValue == 0|| FinalRatio==0 || FinalBarLevel== 0)
+            if (Minus == 0 || FinalValue == 0 || FinalRatio == 0 || FinalBarLevel == 0)
             {
                 /* 輸出結果異常 */
                 ChangeResultColor(true);
-                ResultRatio.Text = ResultLevel.Text =ResultMm.Text = ResultDot.Text = ResultMinusDot.Text = ErrorMessage;
+                ResultRatio.Text = ResultLevel.Text = ResultMm.Text = ResultDot.Text = ResultMinusDot.Text = ErrorMessage;
             }
             else
             {
